@@ -3,6 +3,6 @@ A social media app for sharing compliments and pictures of cute animals. Built w
 
 hosted at:
 
-video demonstraition: http://screencast.com/t/eqkT16G6L8a
+video demonstration: http://screencast.com/t/eqkT16G6L8a
 
 
