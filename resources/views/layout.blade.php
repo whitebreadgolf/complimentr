@@ -5,7 +5,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	<style type="text/css">
 		body{
-			//background-color: #e95d22 !important;
 			background: rgba(233, 93, 34, .1);
 		}	
 		.navbar{

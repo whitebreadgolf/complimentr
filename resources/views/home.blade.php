@@ -44,7 +44,7 @@
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<div class="row-fluid">
-					<div class="col-sm-4">
+					<div class="col-sm-6">
 						<div class="media">
 							<div class="media-left">								
 								<img class="media-object" src="{{ $avatar }}">
@@ -56,25 +56,27 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4 outer">
-						<a href="/{{ $name }}/comp" class="btn btn-block btn-primary"><h2><i><span class="glyphicon glyphicon-text-size"></span> Give Compliment</i></h2></a>
+					<div class="col-sm-3">						
+						<a href="/{{ $name }}/comp" class="btn btn-block btn-primary">							
+							<h4><i><span class="glyphicon glyphicon-text-size"></span> Give Compliment</i></h4>							
+						</a>						
 					</div>
-					<div class="col-sm-4 outer">							
-						<a href="/{{ $name }}/pic" class="btn btn-block btn-primary"><h2><i><span class="glyphicon glyphicon-picture"></span> Give Picture</i></h2></a>
+					<div class="col-sm-3">											
+						<a href="/{{ $name }}/pic" class="btn btn-block btn-primary">							
+							<h4 style="color: white"><i><span class="glyphicon glyphicon-picture"></span> Give Picture</i></h4>							
+						</a>				
 					</div>
 				</div>
 			</div>				
 		</div>
 	</div>			
-	@else
-
 	@endif
 	</div>
 
+	<br>
 
 	<div class="container">
 	@foreach($feed as $item)
-	<br>
 		@if($item->type == 'image')
 			<div class="col-sm-4">
 			<div class="panel" >
