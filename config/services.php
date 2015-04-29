@@ -37,7 +37,7 @@ return [
 	'facebook' => [
     'client_id' => '361359177402898',
     'client_secret' => '81dbfa8bba37b840d66c81a438a4f8b5',
-    'redirect' => 'http://localhost:8000/login/facebook',
+    'redirect' => 'http://complimentr.herokuapp.com/login/facebook',
 ],
 
 ];
