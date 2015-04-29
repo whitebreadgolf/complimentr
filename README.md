@@ -5,4 +5,5 @@ hosted at:
 
 video demonstration: http://screencast.com/t/eqkT16G6L8a
 
+[![Build Status](https://travis-ci.org/KarlCampanellaDysart/complimentr.svg)](https://travis-ci.org/KarlCampanellaDysart/complimentr)
 
