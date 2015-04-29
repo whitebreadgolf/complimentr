@@ -28,6 +28,7 @@
 			margin-top: 10px ;
 			margin-right: 10px;
 			margin-bottom: 10px;
+			margin-left: 10px;
 			padding-top: 5px;
 			padding-bottom: 5px;
 			opacity: 0.75;
@@ -36,8 +37,7 @@
 			border: none;
 		}
 		.panel-heading{
-			background-color:  white;
-			
+			background-color:  white;			
 			color: rgba(233, 93, 34, .75);
 			border: 1px solid rgba(233, 93, 34, .1);
 		}
@@ -59,28 +59,27 @@
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-		        	<span class="icon-bar"></span>
+					<span class="icon-bar glyphicon glyphicon-th-list" style="color:white"></span>
+					
 				</button>
 				<a class="navbar-brand" href="/home">Complimentr</a>
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
 				<ul class="nav navbar-nav navbar-left">
 					<li><a class="active" href="/home">Global Feed<span class="sr-only">(current)</span></a></li>
-
 					@if(Auth::check())
-						<li><a href="/{{ $name }}/sent">My Sent Feed</a></li>
-						<li><a href="/{{ $name }}/recieved">My Recieved Feed</a></li>
+					<li><a href="/{{ $name }}/sent">My Sent Feed</a></li>
+					<li><a href="/{{ $name }}/recieved">My Recieved Feed</a></li>
 					@endif
-					</ul>
-				<ul class="nav navbar-nav navbar-right">		
+				</ul>
+				<ul class="nav navbar-nav navbar-right">	
+					
 					@if(Auth::check())																
 						<li><a class="btn btn-primary btn-log" href="/logout/facebook">Logout</a></li>
 					@else
 						<li><a class="btn btn-primary btn-log"data-toggle="modal" data-target="#myModal" >Login</a></li>
 					@endif
+					
 				</ul>
 			</div>
 		</div>			

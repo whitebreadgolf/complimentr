@@ -22,6 +22,7 @@
 			padding-bottom: 50px;
 			background-color: #e95d22;
 			opacity: 0.75;
+			border: none;
 		}
 		.btn-block:hover{
 			opacity: 0.25;
@@ -41,31 +42,45 @@
 	<div class="container">
 	@if(Auth::check())
 	<div class="col-sm-12">	
-		<div class="panel panel-default">
+		<div class="panel">
+			<div class="panel-heading">
+				<h3 class="media-heading">Welcome {{ $name }}</h3>
+			</div>
 			<div class="panel-body">
 				<div class="row-fluid">
-					<div class="col-sm-6">
+					<div class="col-xs-12">
+						
+					</div>
+				</div>
+				<br>
+				<div class="row-fluid">
+					<div class="col-xs-4">
 						<div class="media">
 							<div class="media-left">								
 								<img class="media-object" src="{{ $avatar }}">
 							</div>
-							<div class="media-body">
-								<h3 class="media-heading">Welcome {{ $name }}</h3>
-								Complimentr isolate the good qualities of social media: nice things and cute pictures of animals. 
-								Look below or press one of the buttons to the right to get started.
+							<div class="media-body">								
+								Complimentr isolates the good qualities of social media: nice things and cute pictures of animals. 
+								Look below or press one of the buttons to the right to get started by sharing nice words or pictures.
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-3">						
-						<a href="/{{ $name }}/comp" class="btn btn-block btn-primary">							
-							<h4><i><span class="glyphicon glyphicon-text-size"></span> Give Compliment</i></h4>							
-						</a>						
+					<div class="col-xs-8">	
+						<div class="container-fluid">
+							<div class="col-sm-6">											
+								<a href="/{{ $name }}/pic" class="btn btn-block btn-primary">							
+									<h4 style="color: white"><i><span class="glyphicon glyphicon-picture"></span> Picture</i></h4>							
+								</a>				
+							</div>
+							<div class="col-sm-6">											
+								<a href="/{{ $name }}/comp" class="btn btn-block btn-primary">							
+									<h4><i><span class="glyphicon glyphicon-text-size"></span> Compliment</i></h4>							
+								</a>				
+							</div>
+						</div>					
+												
 					</div>
-					<div class="col-sm-3">											
-						<a href="/{{ $name }}/pic" class="btn btn-block btn-primary">							
-							<h4 style="color: white"><i><span class="glyphicon glyphicon-picture"></span> Give Picture</i></h4>							
-						</a>				
-					</div>
+					
 				</div>
 			</div>				
 		</div>
@@ -79,7 +94,7 @@
 	@foreach($feed as $item)
 		@if($item->type == 'image')
 			<div class="col-sm-4">
-			<div class="panel" >
+			<div class="panel">
 				<div class= "panel-heading">
 					<p><span class="glyphicon glyphicon-picture"></span> {{ $item->name }} to {{ $item->reciever }} at {{ $item->time_created }}:</p>
 					<h4>{{ $item->message }}</h4>

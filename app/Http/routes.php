@@ -14,19 +14,9 @@
 
 //feeds
 Route::get('/home', 'HomeController@getGlobalFeed');
-Route::get('/{user}/sent', 'HomeController@getMySentFeed');
-Route::get('/{user}/recieved', 'HomeController@getMyRecievedFeed');
 
 //logout
 Route::get('/logout/facebook', 'HomeController@logout');
-
-//get comp and pic
-Route::get('/{user}/comp','HomeController@getRandomCompliment');
-Route::get('/{user}/pic','HomeController@getRandPic');
-
-//post comp and pic
-Route::post('/{user}/comp','HomeController@postRandomCompliment');
-Route::post('/{user}/pic','HomeController@postRandPic');
 
 //comments
 Route::get('/comments/image/{post_id}','HomeController@getImageComments');
@@ -40,6 +30,20 @@ Route::get('/login/facebook', 'Auth\AuthController@login');
 //other login
 Route::post('/login', 'HomeController@login');
 Route::post('/create', 'HomeController@createUser');
+
+Route::group(['middleware' => 'auth'], function(){
+
+	Route::get('/{user}/sent', 'HomeController@getMySentFeed');
+	Route::get('/{user}/recieved', 'HomeController@getMyRecievedFeed');
+
+	//get comp and pic
+	Route::get('/{user}/comp','HomeController@getRandomCompliment');
+	Route::get('/{user}/pic','HomeController@getRandPic');
+
+	//post comp and pic
+	Route::post('/{user}/comp','HomeController@postRandomCompliment');
+	Route::post('/{user}/pic','HomeController@postRandPic');
+});
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
