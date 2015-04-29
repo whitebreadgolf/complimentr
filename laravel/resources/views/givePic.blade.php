@@ -32,8 +32,9 @@
 					</div>
 					<br>
 					<div class="row">
+						<div class="container">
 						<button type="submit" class="btn btn-default">Send Picture</button>
-						<a href="/{{$name}}/pic" class="btn btn-default">New Picture</a>
+						<a href="/{{$name}}/pic" class="btn btn-default">New Picture</a></div>
 					</div>			
 				</form>
 			</div>
