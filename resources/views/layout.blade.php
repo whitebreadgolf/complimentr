@@ -62,11 +62,11 @@
 					<span class="icon-bar glyphicon glyphicon-th-list" style="color:white"></span>
 					
 				</button>
-				<a class="navbar-brand" href="/home">Complimentr</a>
+				<a class="navbar-brand" href="/">Complimentr</a>
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-left">
-					<li><a class="active" href="/home">Global Feed<span class="sr-only">(current)</span></a></li>
+					<li><a class="active" href="/">Global Feed<span class="sr-only">(current)</span></a></li>
 					@if(Auth::check())
 					<li><a href="/{{ $name }}/sent">My Sent Feed</a></li>
 					<li><a href="/{{ $name }}/recieved">My Recieved Feed</a></li>

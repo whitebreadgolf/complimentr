@@ -13,7 +13,7 @@
 
 
 //feeds
-Route::get('/home', 'HomeController@getGlobalFeed');
+Route::get('/', 'HomeController@getGlobalFeed');
 
 //logout
 Route::get('/logout/facebook', 'HomeController@logout');

@@ -27,7 +27,7 @@ class AuthController extends Controller {
     }
 
     public function userHasLoggedIn($user) {
-	    return redirect('/home')->with('success','Welcome ' . $user->username);
+	    return redirect('/')->with('success','Welcome ' . $user->username);
 	}
 
 	use AuthenticatesAndRegistersUsers;
